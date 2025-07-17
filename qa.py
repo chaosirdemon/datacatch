@@ -26,22 +26,10 @@ def read_urls_from_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         urls = [line.strip() for line in file if line.strip()]
     return urls
-#
-# def split_string_to_lists(s):
-#     n = len(s)
-#     return [list(s[i * (n // 4):(i + 1) * (n // 4)]) for i in range(4)]
 
 def get_web_text(url):
     """获取网页的文本内容"""
     try:
-        # 发送HTTP请求
-        # response = requests.get(url,headers=headers)
-        # # 检查请求是否成功
-        # response.raise_for_status()
-        # # 设置响应内容的编码
-        # response.encoding = response.apparent_encoding
-        # # 使用BeautifulSoup解析HTML内容
-        # soup = BeautifulSoup(response.text, 'html.parser')
 
 
         ques_classes = ['grkj_container','dw','time']
@@ -82,15 +70,6 @@ def get_web_text(url):
                 });
             """
         })
-        # 存储每个 class 对应的文本信息
-        # response = requests.get(url, headers=headers, timeout=10)
-        # chrome_options = Options()
-        # chrome_options.add_argument("--headless")  # 启用无头模式
-        # chrome_options.add_argument("--disable-gpu")
-        # service = Service(executable_path="chromedriver", port=0)  # 自动选择空闲端口
-        # driver = webdriver.Edge(options= chrome_options)
-        # driver = webdriver.Edge(options=options)
-        # driver.set_page_load_timeout(15)
         driver.set_page_load_timeout(30)
         driver.get(url)
         time.sleep(4)
@@ -102,28 +81,11 @@ def get_web_text(url):
 
         print(driver.current_url)
 
-
-        # driver.get("https://njtg.nercita.org.cn/user/index.shtml")  # 必须先访问同域名
-        # 设置你的 cookie（替换成你复制的实际值）
-
-
         time.sleep(5)
-        # wait = WebDriverWait(driver, 10)
-        # if response.status_code == 200:
-        #     response.encoding = response.apparent_encoding
-        #     soup = BeautifulSoup(response.text, 'html.parser')
-        #     div_element = soup.find('ul', class_='fuwu_box1_list')
-        # element=driver.find_element(By.CLASS_NAME, ques_classes[0])
-        # # WebDriverWait(driver, 10).until(
-        # #     EC.presence_of_element_located((By.CLASS_NAME, "grkj_container"))
-        # # )
+
         lst=['玉米','水稻']
-        # driver.execute_script(f"window.location.href = '{url}';")
         element=driver.find_element(By.CLASS_NAME, ques_classes[0])
 
-        # element = WebDriverWait(driver, 60).until(
-        #     EC.presence_of_element_located((By.CLASS_NAME, ques_classes[0]))
-        # )
 
         if element is not None:
             h6_element = element.find_element(By.TAG_NAME, "h6")
@@ -184,16 +146,12 @@ def main():
     csv_file = 'qa.csv'
     csv_file_ = 'kong.csv'
 
-    data = []
-#qa-28000001-28010000
-    # https://njtg.nercita.org.cn/tech/question/detail.shtml?quesId=34933210
     begin=34600004
     end=34610000
 
     for i in range(begin,end):
         data = []
         url='https://njtg.nercita.org.cn/tech/question/detail.shtml?quesId='+str(i)
-        # url='https://njtg.nercita.org.cn/tech/question/detail.shtml?quesId=34932222'
         ques,ans = get_web_text(url)
         if ques:
             data.append([i,ques,ans])
