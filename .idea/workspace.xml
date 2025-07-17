@@ -53,6 +53,13 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752714553411</updated>
-      <workItem from="1752714554465" duration="1527000" />
+      <workItem from="1752714554465" duration="1782000" />
     </task>
     <task id="LOCAL-00001" summary="datacatch的第一次提交">
       <option name="closed" value="true" />
@@ -85,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752715333318</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="datacatch的第2次提交">
+      <option name="closed" value="true" />
+      <created>1752716146035</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752716146035</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,9 +133,10 @@
     <MESSAGE value="datacatch首次提交" />
     <MESSAGE value="第一次提交" />
     <MESSAGE value="datacatch的第一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="datacatch的第一次提交" />
+    <MESSAGE value="datacatch的第2次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="datacatch的第2次提交" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/datacatch$qa.coverage" NAME="qa 覆盖结果" MODIFIED="1752716031025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/datacatch$qa.coverage" NAME="qa 覆盖结果" MODIFIED="1752716310984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
