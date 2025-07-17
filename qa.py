@@ -187,7 +187,7 @@ def main():
     data = []
 #qa-28000001-28010000
     # https://njtg.nercita.org.cn/tech/question/detail.shtml?quesId=34933210
-    begin=34600003
+    begin=34600004
     end=34610000
 
     for i in range(begin,end):
